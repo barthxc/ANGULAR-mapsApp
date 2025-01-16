@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { LngLat, Map, Marker } from 'mapbox-gl';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   templateUrl: './markers-page.component.html',
@@ -11,8 +10,6 @@ export class MarkersPageComponent implements AfterViewInit {
 
   public map?: Map;
   public currentLngLat?: LngLat = new LngLat(-3.603, 37.16718);
-
-  constructor(private http: HttpClient) {}
 
   ngAfterViewInit(): void {
     if (!this.divMap) throw 'El elemento HTML no se ha encontrado';
