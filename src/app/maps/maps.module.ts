@@ -11,6 +11,7 @@ import { PropertiesPageComponent } from './pages/properties-page/properties-page
 import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.component';
 
 import * as mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+import { HttpClientModule } from '@angular/common/http';
 (mapboxgl as any).accessToken =
   'pk.eyJ1IjoiYmFydGh4YyIsImEiOiJjbTV5MTYxZjAwMWxtMnNzYzdsZDFoY2UyIn0.NrtZbO_G7BeWsA5PhU4fJQ';
 
@@ -24,6 +25,6 @@ import * as mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-g
     PropertiesPageComponent,
     ZoomRangePageComponent,
   ],
-  imports: [CommonModule, MapsRoutingModule],
+  imports: [CommonModule, MapsRoutingModule, HttpClientModule],
 })
 export class MapsModule {}
